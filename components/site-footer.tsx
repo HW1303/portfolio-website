@@ -1,10 +1,27 @@
+import Link from 'next/link'
 import { Mail, Phone } from 'lucide-react'
 
 export function SiteFooter() {
   return (
     <footer className="mt-24 border-t border-primary/80 bg-primary">
-      <div className="mx-auto flex w-full max-w-[1400px] flex-col gap-2 px-6 py-8 text-sm text-primary-foreground/80 sm:flex-row sm:items-center sm:justify-between lg:px-10">
-        <p>© {new Date().getFullYear()} Hauke Werner</p>
+      <div className="mx-auto flex w-full max-w-[1400px] flex-col gap-4 px-6 py-8 text-sm text-primary-foreground/80 sm:flex-row sm:items-center sm:justify-between lg:px-10">
+        <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-5">
+          <p>© {new Date().getFullYear()} Hauke Werner</p>
+
+          <Link
+            href="/impressum"
+            className="transition-colors hover:text-primary-foreground"
+          >
+            Impressum
+          </Link>
+
+          <Link
+            href="/datenschutz"
+            className="transition-colors hover:text-primary-foreground"
+          >
+            Datenschutz
+          </Link>
+        </div>
 
         <div className="flex items-center gap-5">
           <a
