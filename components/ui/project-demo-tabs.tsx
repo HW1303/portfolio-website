@@ -41,9 +41,9 @@ export function ProjectDemoTabs() {
   const [activeDemo, setActiveDemo] = useState(demos[0])
 
   return (
-    <div className="mt-10">
+    <div className="mt-8 sm:mt-10">
       {/* REITER */}
-      <div className="flex flex-wrap gap-2 border-b border-border">
+      <div className="grid grid-cols-2 gap-1 border-b border-border sm:flex sm:gap-1">
         {demos.map((demo) => {
           const active = activeDemo.id === demo.id
 
@@ -52,7 +52,7 @@ export function ProjectDemoTabs() {
               key={demo.id}
               type="button"
               onClick={() => setActiveDemo(demo)}
-              className={`relative px-4 py-3 text-sm font-medium transition-colors ${
+              className={`relative min-w-0 px-2 py-3 text-center text-xs font-medium leading-5 transition-colors sm:px-4 sm:text-sm ${
                 active
                   ? 'text-foreground'
                   : 'text-muted-foreground hover:text-foreground'
@@ -61,7 +61,7 @@ export function ProjectDemoTabs() {
               {demo.label}
 
               {active && (
-                <span className="absolute inset-x-0 bottom-[-1px] h-px bg-foreground" />
+                <span className="absolute inset-x-1 bottom-[-1px] h-px bg-foreground sm:inset-x-0" />
               )}
             </button>
           )
@@ -69,7 +69,7 @@ export function ProjectDemoTabs() {
       </div>
 
       {/* VIDEO */}
-      <div className="mt-6 overflow-hidden rounded-2xl border border-border bg-background">
+      <div className="mt-5 overflow-hidden rounded-xl border border-border bg-background sm:mt-6 sm:rounded-2xl">
         <div className="aspect-video w-full bg-black">
           <iframe
             key={activeDemo.youtubeId}
@@ -86,7 +86,7 @@ export function ProjectDemoTabs() {
 
       {/* KURZE BESCHREIBUNG */}
       <div className="mt-4">
-        <p className="text-sm font-medium text-foreground">
+        <p className="text-sm font-medium text-foreground sm:text-base">
           {activeDemo.title}
         </p>
 

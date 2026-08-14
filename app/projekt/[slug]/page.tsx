@@ -52,16 +52,16 @@ function SectionTitle({
 }) {
   return (
     <div className="max-w-3xl">
-      <div className="font-mono text-sm font-medium text-primary">
+      <div className="font-mono text-xs font-medium text-primary sm:text-sm">
         {number}
       </div>
 
-      <h2 className="mt-2 font-serif text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
+      <h2 className="mt-2 font-serif text-2xl font-semibold tracking-tight text-foreground sm:text-3xl lg:text-4xl">
         {title}
       </h2>
 
       {text && (
-        <p className="mt-4 max-w-2xl text-base leading-7 text-muted-foreground">
+        <p className="mt-4 max-w-2xl text-sm leading-7 text-muted-foreground sm:text-base">
           {text}
         </p>
       )}
@@ -85,34 +85,34 @@ export default async function ProjectPage({
     <>
       <SiteHeader />
 
-      <main>
+      <main className="w-full overflow-x-hidden">
         {/* HERO */}
         <section className="section-light border-b border-border/60">
-          <div className="mx-auto max-w-6xl px-6 py-14 sm:py-20">
+          <div className="mx-auto w-full max-w-6xl px-5 py-12 sm:px-6 sm:py-16 lg:px-10 lg:py-20">
             <Link
               href="/#projekte"
               className="inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
             >
-              <ArrowLeft className="size-4" />
+              <ArrowLeft className="size-4 shrink-0" />
               Projekte
             </Link>
 
-            <div className="mt-10 max-w-4xl">
-              <p className="text-sm font-medium text-primary">
+            <div className="mt-8 max-w-4xl sm:mt-10">
+              <p className="text-xs font-medium text-primary sm:text-sm">
                 Fiktive Case Study · Prozessautomatisierung
               </p>
 
-              <h1 className="mt-4 font-serif text-3xl font-semibold leading-tight tracking-tight text-foreground sm:text-3xl lg:text-5xl">
+              <h1 className="mt-3 max-w-4xl font-serif text-3xl font-semibold leading-tight tracking-tight text-foreground sm:mt-4 sm:text-4xl lg:text-5xl">
                 Automatisierter B2B-Auftragseingang
               </h1>
 
-              <p className="mt-1 max-w-3xl text-lg leading-8 text-muted-foreground sm:text-xl">
+              <p className="mt-3 max-w-3xl text-base leading-7 text-muted-foreground sm:text-lg sm:leading-8 lg:text-xl">
                 PDF-Bestellungen werden automatisch erfasst, passenden
                 Angeboten zugeordnet, auf Abweichungen geprüft und je nach
                 Ergebnis automatisiert verarbeitet oder zur Klärung übergeben.
               </p>
 
-              <div className="mt-8 flex flex-wrap gap-2">
+              <div className="mt-6 flex flex-wrap gap-2 sm:mt-8">
                 {[
                   'BPMN',
                   'PostgreSQL',
@@ -135,15 +135,15 @@ export default async function ProjectPage({
 
         {/* 01 PROBLEM */}
         <section className="section-alt border-b border-border/60">
-          <div className="mx-auto max-w-6xl px-6 py-16 sm:py-20">
+          <div className="mx-auto w-full max-w-6xl px-5 py-14 sm:px-6 sm:py-16 lg:px-10 lg:py-20">
             <SectionTitle
               number="01"
               title="Problem & Ausgangslage"
               text="Kundenbestellungen treffen per E-Mail als PDF ein. Mitarbeiter müssen die Daten erfassen, das passende Angebot finden, Positionen und Konditionen vergleichen und Abweichungen klären."
             />
 
-            <div className="mt-8 max-w-3xl">
-              <p className="leading-7 text-muted-foreground">
+            <div className="mt-6 max-w-3xl sm:mt-8">
+              <p className="text-sm leading-7 text-muted-foreground sm:text-base">
                 Das Problem entsteht durch die Masse: Bei hohem Auftragsvolumen
                 bindet dieser wiederkehrende Prüfprozess viele Arbeitsstunden,
                 verzögert die Bearbeitung und erhöht das Risiko manueller Fehler.
@@ -153,15 +153,15 @@ export default async function ProjectPage({
             </div>
 
             {/* ANNAHMEN */}
-            <div className="mt-12">
-              <p className="text-sm font-semibold uppercase tracking-[0.14em] text-muted-foreground">
+            <div className="mt-10 sm:mt-12">
+              <p className="text-xs font-semibold uppercase tracking-[0.12em] text-muted-foreground sm:text-sm sm:tracking-[0.14em]">
                 Annahmen für das Modellszenario
               </p>
 
-              <div className="mt-6 grid gap-8 sm:grid-cols-3">
+              <div className="mt-6 grid gap-7 md:grid-cols-3 md:gap-6 lg:gap-8">
                 {/* Bestellungen */}
-                <div className="border-l border-border pl-5">
-                  <div className="font-serif text-3xl font-semibold tracking-tight text-foreground">
+                <div className="border-l border-border pl-4 sm:pl-5">
+                  <div className="font-serif text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
                     1.500
                   </div>
 
@@ -201,8 +201,8 @@ export default async function ProjectPage({
                 </div>
 
                 {/* Bearbeitungszeit */}
-                <div className="border-l border-border pl-5">
-                  <div className="font-serif text-3xl font-semibold tracking-tight text-foreground">
+                <div className="border-l border-border pl-4 sm:pl-5">
+                  <div className="font-serif text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
                     12 Min.
                   </div>
 
@@ -242,8 +242,8 @@ export default async function ProjectPage({
                 </div>
 
                 {/* Automatisierung */}
-                <div className="border-l border-border pl-5">
-                  <div className="font-serif text-3xl font-semibold tracking-tight text-foreground">
+                <div className="border-l border-border pl-4 sm:pl-5">
+                  <div className="font-serif text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
                     70 %
                   </div>
 
@@ -283,7 +283,7 @@ export default async function ProjectPage({
                 </div>
               </div>
 
-              <p className="mt-8 max-w-4xl text-xs leading-5 text-muted-foreground">
+              <p className="mt-7 max-w-4xl text-xs leading-5 text-muted-foreground sm:mt-8">
                 Die Werte sind aus Forschung, Benchmarks und veröffentlichten
                 Praxisfällen abgeleitete Modellannahmen. Sie wurden nicht
                 gemeinsam in einem konkreten Unternehmen gemessen.
@@ -294,14 +294,14 @@ export default async function ProjectPage({
 
         {/* 02 SOLUTION & PROCESS LOGIC */}
         <section className="section-light border-b border-border/60">
-          <div className="mx-auto max-w-6xl px-6 py-16 sm:py-20">
+          <div className="mx-auto w-full max-w-6xl px-5 py-14 sm:px-6 sm:py-16 lg:px-10 lg:py-20">
             <SectionTitle
               number="02"
               title="Lösung & Prozesslogik"
               text="Der Workflow übernimmt die repetitiven Schritte des Auftragseingangs: PDF-Bestellungen werden automatisch erfasst, strukturiert und dem passenden Angebot zugeordnet. Anschließend prüft das System Positionen, Mengen, Preise, Liefertermine und Konditionen regelbasiert."
             />
 
-            <div className="mt-8 max-w-3xl space-y-4">
+            <div className="mt-6 max-w-3xl space-y-4 text-sm sm:mt-8 sm:text-base">
               <p className="leading-7 text-muted-foreground">
                 Eindeutige Standardfälle werden automatisch weiterverarbeitet.
                 Dadurch kann ein großer Teil der manuellen Routinearbeit
@@ -317,8 +317,8 @@ export default async function ProjectPage({
             </div>
 
             {/* PROZESSMODELL & DATENMODELL */}
-            <div className="mt-14">
-              <p className="text-sm font-semibold uppercase tracking-[0.14em] text-muted-foreground">
+            <div className="mt-10 sm:mt-12 lg:mt-14">
+              <p className="text-xs font-semibold uppercase tracking-[0.12em] text-muted-foreground sm:text-sm sm:tracking-[0.14em]">
                 Prozessmodell & Datenmodell
               </p>
 
@@ -332,14 +332,14 @@ export default async function ProjectPage({
             </div>
 
             {/* ZENTRALE PROZESSPFADE */}
-            <div className="mt-12">
-              <p className="text-sm font-semibold uppercase tracking-[0.14em] text-muted-foreground">
+            <div className="mt-10 sm:mt-12">
+              <p className="text-xs font-semibold uppercase tracking-[0.12em] text-muted-foreground sm:text-sm sm:tracking-[0.14em]">
                 Drei zentrale Prozesspfade
               </p>
 
-              <div className="mt-6 grid gap-5 md:grid-cols-3">
+              <div className="mt-6 grid grid-cols-1 gap-4 sm:gap-5 lg:grid-cols-3">
                 {/* HAPPY PATH */}
-                <div className="flex h-full flex-col rounded-2xl border border-border bg-card p-6">
+                <div className="flex h-full flex-col rounded-2xl border border-border bg-card p-5 sm:p-6">
                   <div className="flex size-10 items-center justify-center rounded-xl bg-secondary">
                     <CheckCircle2 className="size-5 text-foreground" />
                   </div>
@@ -374,7 +374,7 @@ export default async function ProjectPage({
                 </div>
 
                 {/* ABWEICHUNG */}
-                <div className="flex h-full flex-col rounded-2xl border border-border bg-card p-6">
+                <div className="flex h-full flex-col rounded-2xl border border-border bg-card p-5 sm:p-6">
                   <div className="flex size-10 items-center justify-center rounded-xl bg-secondary">
                     <AlertTriangle className="size-5 text-foreground" />
                   </div>
@@ -409,7 +409,7 @@ export default async function ProjectPage({
                 </div>
 
                 {/* FUZZY */}
-                <div className="flex h-full flex-col rounded-2xl border border-border bg-card p-6">
+                <div className="flex h-full flex-col rounded-2xl border border-border bg-card p-5 sm:p-6">
                   <div className="flex size-10 items-center justify-center rounded-xl bg-secondary">
                     <UserCheck className="size-5 text-foreground" />
                   </div>
@@ -450,7 +450,7 @@ export default async function ProjectPage({
 
         {/* 03 DEMO */}
         <section className="section-alt border-b border-border/60">
-          <div className="mx-auto max-w-6xl px-6 py-16 sm:py-20">
+          <div className="mx-auto w-full max-w-6xl px-5 py-14 sm:px-6 sm:py-16 lg:px-10 lg:py-20">
             <SectionTitle
               number="03"
               title="Das System in der Praxis"
@@ -463,7 +463,7 @@ export default async function ProjectPage({
 
         {/* 04 ECONOMIC POTENTIAL */}
         <section className="section-light border-b border-border/60">
-          <div className="mx-auto max-w-6xl px-6 py-16 sm:py-20">
+          <div className="mx-auto w-full max-w-6xl px-5 py-14 sm:px-6 sm:py-16 lg:px-10 lg:py-20">
             <SectionTitle
               number="04"
               title="Wirtschaftliches Potenzial"
@@ -471,14 +471,14 @@ export default async function ProjectPage({
             />
 
             {/* IST-AUFWAND */}
-            <div className="mt-10 rounded-2xl border border-border bg-card p-6 sm:p-8">
-              <p className="text-sm font-semibold uppercase tracking-[0.14em] text-muted-foreground">
+            <div className="mt-8 rounded-2xl border border-border bg-card p-5 sm:mt-10 sm:p-7 lg:p-8">
+              <p className="text-xs font-semibold uppercase tracking-[0.12em] text-muted-foreground sm:text-sm sm:tracking-[0.14em]">
                 Modellierter manueller Aufwand
               </p>
 
-              <div className="mt-7 grid gap-8 md:grid-cols-[1fr_auto_1fr_auto_1fr] md:items-center">
+              <div className="mt-7 grid grid-cols-1 gap-6 sm:grid-cols-3 sm:gap-5 lg:grid-cols-[1fr_auto_1fr_auto_1fr] lg:items-center lg:gap-8">
                 <div>
-                  <p className="font-serif text-3xl font-semibold text-foreground">
+                  <p className="font-serif text-2xl font-semibold text-foreground sm:text-3xl">
                     1.500
                   </p>
                   <p className="mt-1 text-sm text-muted-foreground">
@@ -486,12 +486,12 @@ export default async function ProjectPage({
                   </p>
                 </div>
 
-                <div className="hidden text-xl text-muted-foreground md:block">
+                <div className="hidden text-xl text-muted-foreground lg:block">
                   ×
                 </div>
 
                 <div>
-                  <p className="font-serif text-3xl font-semibold text-foreground">
+                  <p className="font-serif text-2xl font-semibold text-foreground sm:text-3xl">
                     12 Min.
                   </p>
                   <p className="mt-1 text-sm text-muted-foreground">
@@ -499,12 +499,12 @@ export default async function ProjectPage({
                   </p>
                 </div>
 
-                <div className="hidden text-xl text-muted-foreground md:block">
+                <div className="hidden text-xl text-muted-foreground lg:block">
                   =
                 </div>
 
                 <div>
-                  <p className="font-serif text-3xl font-semibold text-foreground">
+                  <p className="font-serif text-2xl font-semibold text-foreground sm:text-3xl">
                     300 Std.
                   </p>
                   <p className="mt-1 text-sm text-muted-foreground">
@@ -513,14 +513,14 @@ export default async function ProjectPage({
                 </div>
               </div>
 
-              <p className="mt-6 border-t border-border pt-5 font-mono text-sm text-muted-foreground">
+              <p className="mt-6 overflow-x-auto border-t border-border pt-5 font-mono text-xs leading-6 text-muted-foreground sm:text-sm">
                 1.500 × 12 Min. = 18.000 Min. = 300 Std. / Monat
               </p>
             </div>
 
             {/* SZENARIO */}
-            <div className="mt-6 rounded-2xl border border-border bg-card p-6 sm:p-8">
-              <p className="text-sm font-semibold uppercase tracking-[0.14em] text-muted-foreground">
+            <div className="mt-5 rounded-2xl border border-border bg-card p-5 sm:mt-6 sm:p-7 lg:p-8">
+              <p className="text-xs font-semibold uppercase tracking-[0.12em] text-muted-foreground sm:text-sm sm:tracking-[0.14em]">
                 Automatisierungsszenario
               </p>
 
@@ -531,9 +531,9 @@ export default async function ProjectPage({
                 Wert wird hier ausschließlich als Szenario verwendet.
               </p>
 
-              <div className="mt-7 grid gap-8 md:grid-cols-[1fr_auto_1fr] md:items-center">
+              <div className="mt-7 grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-5 lg:grid-cols-[1fr_auto_1fr] lg:items-center lg:gap-8">
                 <div>
-                  <p className="font-serif text-3xl font-semibold text-foreground">
+                  <p className="font-serif text-2xl font-semibold text-foreground sm:text-3xl">
                     300 Std.
                   </p>
                   <p className="mt-1 text-sm text-muted-foreground">
@@ -541,12 +541,12 @@ export default async function ProjectPage({
                   </p>
                 </div>
 
-                <div className="hidden text-xl text-muted-foreground md:block">
+                <div className="hidden text-xl text-muted-foreground lg:block">
                   × 70 % =
                 </div>
 
                 <div>
-                  <p className="font-serif text-4xl font-semibold text-foreground">
+                  <p className="font-serif text-3xl font-semibold text-foreground sm:text-4xl">
                     bis zu 210 Std.
                   </p>
                   <p className="mt-1 text-sm text-muted-foreground">
@@ -555,19 +555,19 @@ export default async function ProjectPage({
                 </div>
               </div>
 
-              <p className="mt-6 border-t border-border pt-5 font-mono text-sm text-muted-foreground">
+              <p className="mt-6 overflow-x-auto border-t border-border pt-5 font-mono text-xs leading-6 text-muted-foreground sm:text-sm">
                 300 Std. × 70 % = 210 Std. / Monat
               </p>
             </div>
 
             {/* ERGEBNIS */}
-            <div className="mt-6 rounded-2xl bg-foreground p-7 text-background sm:p-9">
-              <p className="text-sm font-semibold uppercase tracking-[0.14em] text-background/60">
+            <div className="mt-5 rounded-2xl bg-foreground p-5 text-background sm:mt-6 sm:p-7 lg:p-9">
+              <p className="text-xs font-semibold uppercase tracking-[0.12em] text-background/60 sm:text-sm sm:tracking-[0.14em]">
                 Kernaussage
               </p>
 
-              <div className="mt-6">
-                <p className="font-serif text-4xl font-semibold tracking-tight sm:text-5xl">
+              <div className="mt-5 sm:mt-6">
+                <p className="font-serif text-3xl font-semibold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
                   bis zu 210 Stunden / Monat
                 </p>
 
@@ -577,7 +577,7 @@ export default async function ProjectPage({
                 </p>
               </div>
 
-              <div className="mt-7 border-t border-background/15 pt-6">
+              <div className="mt-6 border-t border-background/15 pt-5 sm:mt-7 sm:pt-6">
                 <p className="max-w-4xl text-sm leading-6 text-background/70">
                   Bei einem modellierten Personalkostensatz von rund{' '}
                   <span className="font-medium text-background">
@@ -623,16 +623,16 @@ export default async function ProjectPage({
 
         {/* 05 EINORDNUNG */}
         <section className="section-alt border-b border-border/60">
-          <div className="mx-auto max-w-6xl px-6 py-16 sm:py-20">
+          <div className="mx-auto w-full max-w-6xl px-5 py-14 sm:px-6 sm:py-16 lg:px-10 lg:py-20">
             <SectionTitle
               number="05"
               title="Einordnung"
               text="Die Case Study zeigt meine Herangehensweise an Prozessanalyse, Automatisierung und wirtschaftliche Bewertung – nicht den Erfolg eines realen Kundenprojekts."
             />
 
-            <div className="mt-10 grid gap-5 md:grid-cols-2">
+            <div className="mt-8 grid grid-cols-1 gap-4 sm:mt-10 sm:gap-5 lg:grid-cols-2">
               {/* WAS DIE CASE STUDY ZEIGT */}
-              <div className="rounded-2xl border border-border bg-card p-7">
+              <div className="rounded-2xl border border-border bg-card p-5 sm:p-7">
                 <div className="flex size-10 items-center justify-center rounded-xl bg-secondary">
                   <CheckCircle2 className="size-5 text-foreground" />
                 </div>
@@ -685,7 +685,7 @@ export default async function ProjectPage({
               </div>
 
               {/* WAS DIE CASE STUDY NICHT ZEIGT */}
-              <div className="rounded-2xl border border-border bg-card p-7">
+              <div className="rounded-2xl border border-border bg-card p-5 sm:p-7">
                 <div className="flex size-10 items-center justify-center rounded-xl bg-secondary">
                   <AlertTriangle className="size-5 text-foreground" />
                 </div>
@@ -738,15 +738,17 @@ export default async function ProjectPage({
               </div>
             </div>
 
-            <p className="mt-5 max-w-4xl text-sm leading-6 text-muted-foreground">
-              Dieses Projekt war mein erster vollständiger
-              Automatisierungs-Case.
-            </p>
+            <div className="mt-5 max-w-4xl text-sm leading-6 text-muted-foreground">
+              <p>
+                Dieses Projekt war mein erster vollständiger
+                Automatisierungs-Case.
+              </p>
 
-            <p className="mt-0 max-w-4xl text-sm leading-6 text-muted-foreground">
-              Künftige Projekte werde ich direkt an realen Unternehmen und
-              tatsächlich validierten Prozessproblemen ausrichten.
-            </p>
+              <p>
+                Künftige Projekte werde ich direkt an realen Unternehmen und
+                tatsächlich validierten Prozessproblemen ausrichten.
+              </p>
+            </div>
           </div>
         </section>
       </main>
