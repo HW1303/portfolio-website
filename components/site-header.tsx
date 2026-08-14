@@ -25,7 +25,7 @@ export function SiteHeader() {
           : 'border-b border-primary/80 bg-primary'
       }`}
     >
-      <div className="mx-auto flex w-full max-w-[1400px] items-center justify-between px-5 py-4 sm:px-6 sm:py-5 lg:px-10 2xl:max-w-[1600px] 2xl:px-12 2xl:py-6">
+      <div className="flex w-full items-center justify-between px-5 py-4 sm:px-6 sm:py-5 lg:px-10 2xl:px-12 2xl:py-6">
         <Link
           href="/"
           className={`shrink-0 font-serif text-sm font-semibold tracking-tight transition-colors duration-300 sm:text-base 2xl:text-lg ${
