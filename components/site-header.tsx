@@ -25,10 +25,10 @@ export function SiteHeader() {
           : 'border-b border-primary/80 bg-primary'
       }`}
     >
-      <div className="mx-auto flex w-full max-w-[1400px] items-center justify-between px-5 py-4 sm:px-6 sm:py-5 lg:px-10">
+      <div className="mx-auto flex w-full max-w-[1400px] items-center justify-between px-5 py-4 sm:px-6 sm:py-5 lg:px-10 2xl:max-w-[1600px] 2xl:px-12 2xl:py-6">
         <Link
           href="/"
-          className={`shrink-0 font-serif text-sm font-semibold tracking-tight transition-colors duration-300 sm:text-base ${
+          className={`shrink-0 font-serif text-sm font-semibold tracking-tight transition-colors duration-300 sm:text-base 2xl:text-lg ${
             scrolled
               ? 'text-foreground'
               : 'text-primary-foreground'
@@ -39,7 +39,7 @@ export function SiteHeader() {
 
         <nav
           aria-label="Hauptnavigation"
-          className="flex items-center gap-4 text-xs sm:gap-6 sm:text-sm lg:gap-8"
+          className="flex items-center gap-4 text-xs sm:gap-6 sm:text-sm lg:gap-8 2xl:gap-10 2xl:text-base"
         >
           <Link
             href="/#projekte"

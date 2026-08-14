@@ -41,9 +41,8 @@ export function ProjectDemoTabs() {
   const [activeDemo, setActiveDemo] = useState(demos[0])
 
   return (
-    <div className="mt-8 sm:mt-10">
-      {/* REITER */}
-      <div className="grid grid-cols-2 gap-1 border-b border-border sm:flex sm:gap-1">
+    <div className="mt-8 sm:mt-10 2xl:mt-12">
+      <div className="grid grid-cols-2 gap-1 border-b border-border sm:flex sm:gap-1 2xl:gap-2">
         {demos.map((demo) => {
           const active = activeDemo.id === demo.id
 
@@ -52,7 +51,7 @@ export function ProjectDemoTabs() {
               key={demo.id}
               type="button"
               onClick={() => setActiveDemo(demo)}
-              className={`relative min-w-0 px-2 py-3 text-center text-xs font-medium leading-5 transition-colors sm:px-4 sm:text-sm ${
+              className={`relative min-w-0 px-2 py-3 text-center text-xs font-medium leading-5 transition-colors sm:px-4 sm:text-sm 2xl:px-5 2xl:py-4 2xl:text-base ${
                 active
                   ? 'text-foreground'
                   : 'text-muted-foreground hover:text-foreground'
@@ -68,8 +67,7 @@ export function ProjectDemoTabs() {
         })}
       </div>
 
-      {/* VIDEO */}
-      <div className="mt-5 overflow-hidden rounded-xl border border-border bg-background sm:mt-6 sm:rounded-2xl">
+      <div className="mt-5 overflow-hidden rounded-xl border border-border bg-background sm:mt-6 sm:rounded-2xl 2xl:mt-8">
         <div className="aspect-video w-full bg-black">
           <iframe
             key={activeDemo.youtubeId}
@@ -84,13 +82,12 @@ export function ProjectDemoTabs() {
         </div>
       </div>
 
-      {/* KURZE BESCHREIBUNG */}
-      <div className="mt-4">
-        <p className="text-sm font-medium text-foreground sm:text-base">
+      <div className="mt-4 2xl:mt-6">
+        <p className="text-sm font-medium text-foreground sm:text-base 2xl:text-lg">
           {activeDemo.title}
         </p>
 
-        <p className="mt-1 max-w-3xl text-sm leading-6 text-muted-foreground">
+        <p className="mt-1 max-w-3xl text-sm leading-6 text-muted-foreground 2xl:mt-2 2xl:max-w-4xl 2xl:text-base 2xl:leading-7">
           {activeDemo.description}
         </p>
       </div>
