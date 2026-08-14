@@ -11,7 +11,7 @@ const models = [
     description:
       'Der vollständige Ablauf vom Eingang der Bestellung über Zuordnung und Prüfung bis zur automatischen Verarbeitung oder manuellen Klärung.',
     icon: Workflow,
-    videoUrl: '/videos/BPMN.mp4',
+    youtubeId: 'EVAQ9KIjXfg',
   },
   {
     id: 'data',
@@ -20,7 +20,7 @@ const models = [
     description:
       'Die zentrale Datenstruktur hinter dem Prozess: Kunden, Angebote, Bestellungen, Positionen und Klärfälle.',
     icon: Database,
-    videoUrl: '/videos/Datenmodell.mp4',
+    youtubeId: 'Dm0u8BHiqqg',
   },
 ]
 
@@ -59,15 +59,17 @@ export function ProjectModelTabs() {
 
       {/* VIDEO */}
       <div className="mt-6 overflow-hidden rounded-2xl border border-border bg-background">
-        {activeModel.videoUrl ? (
-          <div className="aspect-video">
-            <video
-              key={activeModel.videoUrl}
-              src={activeModel.videoUrl}
+        {activeModel.youtubeId ? (
+          <div className="aspect-video w-full">
+            <iframe
+              key={activeModel.youtubeId}
+              src={`https://www.youtube-nocookie.com/embed/${activeModel.youtubeId}?rel=0&playsinline=1`}
               title={activeModel.title}
-              controls
               className="h-full w-full"
-              preload="metadata"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
             />
           </div>
         ) : (
@@ -95,4 +97,4 @@ export function ProjectModelTabs() {
       </div>
     </div>
   )
-} 
+}

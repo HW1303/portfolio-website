@@ -9,7 +9,7 @@ const demos = [
     title: 'Einführung',
     description:
       'Kurze Einführung in den Aufbau der Demo und die gezeigten Prozessfälle.',
-    videoUrl: '/videos/Einführung.mp4',
+    youtubeId: 'iifxYo8YmQQ',
   },
   {
     id: 'happy',
@@ -17,7 +17,7 @@ const demos = [
     title: 'Happy-Path',
     description:
       'Bestellung und Angebot stimmen überein. Der Auftrag wird automatisch verarbeitet.',
-    videoUrl: '/videos/Happy.mp4',
+    youtubeId: 'pPkU5scNYPM',
   },
   {
     id: 'deviation',
@@ -25,7 +25,7 @@ const demos = [
     title: 'Direkte Abweichung',
     description:
       'Das Angebot ist eindeutig zugeordnet, aber relevante Bestelldaten weichen ab. Das System erstellt einen Klärfall.',
-    videoUrl: '/videos/Abweichung.mp4',
+    youtubeId: 'Fn9SpTvSC4c',
   },
   {
     id: 'fuzzy',
@@ -33,7 +33,7 @@ const demos = [
     title: 'Fuzzy-Zuordnung',
     description:
       'Eine eindeutige Angebotsreferenz fehlt. Das System bewertet mögliche Kandidaten und übergibt den besten Treffer zur Prüfung.',
-    videoUrl: '/videos/Fuzzy.mp4',
+    youtubeId: 'YndSIXF7xkI',
   },
 ]
 
@@ -70,14 +70,16 @@ export function ProjectDemoTabs() {
 
       {/* VIDEO */}
       <div className="mt-6 overflow-hidden rounded-2xl border border-border bg-background">
-        <div className="aspect-video bg-black">
-          <video
-            key={activeDemo.videoUrl}
-            src={activeDemo.videoUrl}
+        <div className="aspect-video w-full bg-black">
+          <iframe
+            key={activeDemo.youtubeId}
+            src={`https://www.youtube-nocookie.com/embed/${activeDemo.youtubeId}?rel=0&playsinline=1`}
             title={activeDemo.title}
-            controls
-            preload="metadata"
             className="h-full w-full"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
           />
         </div>
       </div>
