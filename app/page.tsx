@@ -52,8 +52,8 @@ export default function HomePage() {
             </h1>
 
             <p className="mx-auto mt-3 max-w-5xl text-lg leading-relaxed text-muted-foreground sm:text-xl">
-              Ich unterstütze Sie dabei, wirtschaftliche Probleme in Prozessen
-              durch gezielte Automatisierungen zu lösen.
+              Ich verbinde betriebswirtschaftliches Prozessverständnis mit Daten und technischer Umsetzung.
+              Von der Analyse bestehender Abläufe bis zur Digitalisierung und Automatisierung.
               <br />
               Von der Analyse des Prozesses bis zur Umsetzung.
             </p>
