@@ -16,7 +16,7 @@ const sourceSerif = Source_Serif_4({
 })
 
 export const metadata: Metadata = {
-  title: 'Hauke Werner – Prozessanalyse & Prozessautomatisierung',
+  title: 'Portfolio Website',
   description:
     'Portfolio von Hauke Werner. BWL-Student an der Universität Bayreuth mit Fokus auf Prozessanalyse, Prozessautomatisierung und technische Umsetzung.',
   generator: 'v0.app',
