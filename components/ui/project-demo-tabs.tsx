@@ -42,7 +42,8 @@ export function ProjectDemoTabs() {
 
   return (
     <div className="mt-8 sm:mt-10 2xl:mt-12">
-      <div className="grid grid-cols-2 gap-1 border-b border-border sm:flex sm:gap-1 2xl:gap-2">
+      {/* REITER */}
+      <div className="grid grid-cols-2 gap-2 rounded-xl border border-border bg-card/60 p-1.5 sm:grid-cols-4 sm:gap-2 sm:p-2 2xl:gap-3">
         {demos.map((demo) => {
           const active = activeDemo.id === demo.id
 
@@ -51,22 +52,19 @@ export function ProjectDemoTabs() {
               key={demo.id}
               type="button"
               onClick={() => setActiveDemo(demo)}
-              className={`relative min-w-0 px-2 py-3 text-center text-xs font-medium leading-5 transition-colors sm:px-4 sm:text-sm 2xl:px-5 2xl:py-4 2xl:text-base ${
+              className={`min-w-0 rounded-lg border px-3 py-3 text-center text-xs font-medium leading-5 transition-all duration-200 sm:px-4 sm:text-sm 2xl:px-5 2xl:py-4 2xl:text-base ${
                 active
-                  ? 'text-foreground'
-                  : 'text-muted-foreground hover:text-foreground'
+                  ? 'border-primary/40 bg-primary text-primary-foreground shadow-sm'
+                  : 'border-transparent bg-background/70 text-muted-foreground hover:border-border hover:bg-background hover:text-foreground'
               }`}
             >
               {demo.label}
-
-              {active && (
-                <span className="absolute inset-x-1 bottom-[-1px] h-px bg-foreground sm:inset-x-0" />
-              )}
             </button>
           )
         })}
       </div>
 
+      {/* VIDEO */}
       <div className="mt-5 overflow-hidden rounded-xl border border-border bg-background sm:mt-6 sm:rounded-2xl 2xl:mt-8">
         <div className="aspect-video w-full bg-black">
           <iframe
@@ -82,6 +80,7 @@ export function ProjectDemoTabs() {
         </div>
       </div>
 
+      {/* BESCHREIBUNG */}
       <div className="mt-4 2xl:mt-6">
         <p className="text-sm font-medium text-foreground sm:text-base 2xl:text-lg">
           {activeDemo.title}

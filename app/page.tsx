@@ -93,7 +93,7 @@ export default function HomePage() {
           aria-labelledby="ueber-mich"
           className="section-alt border-t border-border/60"
         >
-          <div className="mx-auto w-full max-w-[1400px] px-5 py-16 sm:px-6 sm:py-20 md:py-24 lg:px-10 lg:py-28 xl:px-20 2xl:max-w-[1600px] 2xl:py-36">
+          <div className="mx-auto w-full max-w-[1400px] px-5 py-24 sm:px-6 sm:py-28 md:py-32 lg:px-10 lg:py-36 xl:px-20 2xl:max-w-[1600px] 2xl:py-44">
             <div className="mx-auto max-w-5xl 2xl:max-w-6xl">
               <div className="grid items-center gap-10 md:grid-cols-[180px_1fr] md:gap-12 lg:grid-cols-[220px_1fr] lg:gap-16 2xl:grid-cols-[250px_1fr] 2xl:gap-20">
                 <figure className="mx-auto w-full max-w-[140px] sm:max-w-[150px] md:mx-0 md:max-w-[160px] 2xl:max-w-[200px]">

@@ -88,7 +88,7 @@ export default async function ProjectPage({
       <main className="w-full overflow-x-hidden">
         {/* HERO */}
         <section className="section-light border-b border-border/60">
-          <div className="mx-auto w-full max-w-6xl px-5 py-12 sm:px-6 sm:py-16 lg:px-10 lg:py-20 2xl:max-w-7xl 2xl:px-12 2xl:py-28">
+          <div className="mx-auto w-full max-w-6xl px-12 py-24 sm:px-12 sm:py-28 lg:px-16 lg:py-32 2xl:max-w-7xl 2xl:px-32 2xl:py-48">
             <Link
               href="/#projekte"
               className="inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-foreground 2xl:text-base"

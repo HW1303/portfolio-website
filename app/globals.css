@@ -61,58 +61,44 @@
 :root {
   color-scheme: light;
 
-  /* Grundfläche */
-  --background: #f8f5ef;
+  --background: #f9f6f0;
   --foreground: #292724;
 
-  /* Zweiter Section-Ton */
-  --section-alt: #f1ede5;
+  --section-alt: #eee7de;
 
-  /* Karten */
   --card: #fcfaf6;
   --card-foreground: #292724;
 
-  /* Popovers */
   --popover: #fcfaf6;
   --popover-foreground: #292724;
 
-  /* Braun / Hauptakzent */
   --primary: #9a6548;
   --primary-foreground: #fffaf5;
 
-  /* Sekundäre Flächen */
   --secondary: #eee8df;
   --secondary-foreground: #36322e;
 
-  /* Gedämpfte Flächen */
   --muted: #eee9e2;
   --muted-foreground: #716b64;
 
-  /* Akzentflächen */
   --accent: #e7ddd2;
   --accent-foreground: #463c34;
 
-  /* Fehlerfarbe */
   --destructive: #b7473e;
 
-  /* Linien */
-  --border: #ddd6cc;
-  --input: #ddd6cc;
+  --border: #d9d1c7;
+  --input: #d9d1c7;
 
-  /* Fokus */
   --ring: #9a6548;
 
-  /* Charts */
   --chart-1: #9a6548;
   --chart-2: #b27c5d;
   --chart-3: #765544;
   --chart-4: #c39a7c;
   --chart-5: #5d4a3f;
 
-  /* Rundungen */
   --radius: 0.5rem;
 
-  /* Sidebar */
   --sidebar: #f4f0e9;
   --sidebar-foreground: #292724;
 
@@ -140,78 +126,73 @@
     @apply text-foreground;
 
     min-height: 100vh;
+
     background-color: var(--background);
 
     background-image:
-      radial-gradient(
-        circle at 15% 20%,
-        rgba(120, 90, 65, 0.045),
-        transparent 30rem
+      linear-gradient(
+        rgba(248, 245, 239, 0.40),
+        rgba(248, 245, 239, 0.40)
       ),
-      radial-gradient(
-        circle at 85% 65%,
-        rgba(120, 90, 65, 0.035),
-        transparent 34rem
-      ),
-      repeating-linear-gradient(
-        45deg,
-        rgba(70, 55, 45, 0.022) 0,
-        rgba(70, 55, 45, 0.022) 1px,
-        transparent 1px,
-        transparent 7px
-      );
+      url('/papiertextur.jpg');
 
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
     background-attachment: fixed;
   }
 }
 
+/* PAPIERTEXTUR + SECTION-TRENNUNG */
+
+.section-light,
+.section-alt {
+  position: relative;
+  isolation: isolate;
+}
+
 .section-light {
-  background-color: var(--background);
+  background-color: rgba(250, 248, 244, 0.68);
 
   background-image:
     radial-gradient(
-      circle at 15% 20%,
-      rgba(120, 90, 65, 0.04),
-      transparent 30rem
+      ellipse at 15% 20%,
+      rgba(154, 101, 72, 0.025),
+      transparent 36rem
     ),
     radial-gradient(
-      circle at 85% 70%,
-      rgba(120, 90, 65, 0.03),
-      transparent 32rem
-    ),
-    repeating-linear-gradient(
-      45deg,
-      rgba(70, 55, 45, 0.02) 0,
-      rgba(70, 55, 45, 0.02) 1px,
-      transparent 1px,
-      transparent 7px
+      ellipse at 85% 75%,
+      rgba(120, 90, 65, 0.018),
+      transparent 42rem
     );
 }
 
 .section-alt {
-  background-color: var(--section-alt);
+  background-color: rgba(233, 225, 215, 0.69);
 
   background-image:
-    radial-gradient(
-      circle at 80% 25%,
-      rgba(120, 90, 65, 0.045),
-      transparent 30rem
+    linear-gradient(
+      rgba(154, 101, 72, 0.018),
+      rgba(154, 101, 72, 0.018)
     ),
     radial-gradient(
-      circle at 20% 75%,
-      rgba(120, 90, 65, 0.035),
-      transparent 34rem
+      ellipse at 82% 20%,
+      rgba(154, 101, 72, 0.04),
+      transparent 36rem
     ),
-    repeating-linear-gradient(
-      45deg,
-      rgba(70, 55, 45, 0.022) 0,
-      rgba(70, 55, 45, 0.022) 1px,
-      transparent 1px,
-      transparent 7px
+    radial-gradient(
+      ellipse at 18% 80%,
+      rgba(120, 90, 65, 0.03),
+      transparent 42rem
     );
 }
 
-/* Bewegungen reduzieren, wenn Betriebssystem das verlangt */
+.section-light > *,
+.section-alt > * {
+  position: relative;
+  z-index: 1;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
