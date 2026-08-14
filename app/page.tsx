@@ -40,8 +40,8 @@ export default function HomePage() {
 
       <main className="w-full overflow-x-hidden">
         {/* Hero */}
-        <section className="section-light">
-          <div className="mx-auto w-full max-w-[1400px] px-5 pb-24 pt-20 text-center sm:px-6 sm:pb-32 sm:pt-24 md:pb-36 md:pt-28 lg:px-10 lg:pb-44 lg:pt-32 2xl:max-w-[1600px] 2xl:px-12 2xl:pb-48 2xl:pt-36">
+        <section className="section-light flex min-h-[calc(100svh-56px)] items-center sm:min-h-[calc(100svh-64px)] 2xl:min-h-[calc(100svh-72px)]">
+          <div className="mx-auto w-full max-w-[1400px] px-5 py-16 text-center sm:px-6 sm:py-20 lg:px-10 2xl:max-w-[1600px] 2xl:px-12">
             <p className="mx-auto max-w-4xl text-xs font-medium leading-5 tracking-wide text-primary sm:text-sm md:text-base 2xl:text-lg">
               BWL-Student · Universität Bayreuth · Prozessanalyse &amp;
               -automatisierung
