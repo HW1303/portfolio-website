@@ -10,25 +10,25 @@ const unterstuetzung = [
   {
     nummer: '01',
     titel: 'Prozesse analysieren & modellieren',
-    text: 'Den Ist-Zustand aufnehmen, Schwachstellen erkennen und konkretes Automatisierungspotenzial herausarbeiten.',
+    text: 'Abläufe nachvollziehen, Zusammenhänge erkennen und Prozesse strukturiert dokumentieren.',
     tags: ['Prozessanalyse', 'BPMN'],
   },
   {
     nummer: '02',
-    titel: 'Automatisierungen bauen',
-    text: 'Wiederkehrende Abläufe technisch umsetzen – von der Datenextraktion und Verarbeitung bis zur Benachrichtigung.',
-    tags: ['n8n', 'SQL', 'Python'],
+    titel: 'Mit Daten & Software arbeiten',
+    text: 'Daten strukturiert verarbeiten und mich in bestehende Softwaretools, Systeme und Schnittstellen einarbeiten.',
+    tags: ['Daten', 'Softwaretools', 'SQL'],
   },
   {
     nummer: '03',
-    titel: 'Wirtschaftlich bewerten',
-    text: 'Zeitaufwand, Fehlerquellen und Kosten betrachten, damit nachvollziehbar wird, ob sich eine Automatisierung lohnt.',
-    tags: ['Zeit', 'Fehler', 'Kosten'],
+    titel: 'Digitale Lösungen umsetzen',
+    text: 'Technische Lösungen und Workflows entwickeln, testen und schrittweise verbessern.',
+    tags: ['n8n', 'Python', 'APIs'],
   },
   {
     nummer: '04',
     titel: 'Im Tagesgeschäft mit anpacken',
-    text: 'Auch wiederkehrende Aufgaben und Datenpflege übernehmen, damit das Team bei operativen Tätigkeiten entlastet wird.',
+    text: 'Daten pflegen, Ergebnisse prüfen, Aufgaben dokumentieren und Teams zuverlässig im operativen Alltag unterstützen.',
     tags: ['Datenpflege', 'Operative Unterstützung'],
   },
 ]
@@ -43,8 +43,7 @@ export default function HomePage() {
         <section className="section-light flex min-h-[calc(100svh-56px)] items-center sm:min-h-[calc(100svh-64px)] 2xl:min-h-[calc(100svh-72px)]">
           <div className="mx-auto w-full max-w-[1400px] px-5 py-16 text-center sm:px-6 sm:py-20 lg:px-10 2xl:max-w-[1600px] 2xl:px-12">
             <p className="mx-auto max-w-4xl text-xs font-medium leading-5 tracking-wide text-primary sm:text-sm md:text-base 2xl:text-lg">
-              BWL-Student · Universität Bayreuth · Prozessanalyse &amp;
-              -automatisierung
+              BWL-Student · Universität Bayreuth · Digitalisierung & Business IT
             </p>
 
             <h1 className="mx-auto mt-4 max-w-5xl font-serif text-4xl font-semibold leading-tight tracking-tight text-foreground sm:mt-5 sm:text-5xl md:text-6xl lg:text-7xl 2xl:max-w-6xl 2xl:text-8xl">
@@ -53,11 +52,10 @@ export default function HomePage() {
 
             <p className="mx-auto mt-3 max-w-5xl text-base leading-7 text-muted-foreground sm:text-lg sm:leading-relaxed md:text-xl 2xl:max-w-6xl 2xl:text-2xl 2xl:leading-relaxed">
               Ich verbinde betriebswirtschaftliches Prozessverständnis mit Daten
-              und technischer Umsetzung.
+              und technischen Lösungen.
               <br className="hidden sm:block" />
               <span className="sm:hidden"> </span>
-              Von der Analyse bestehender Abläufe bis zur Digitalisierung und
-              Automatisierung.
+              Mich interessieren digitale Geschäftsprozesse, Systeme und deren praktische Umsetzung.
             </p>
 
             <div className="mx-auto mt-8 flex w-full max-w-sm flex-col gap-3 sm:mt-10 sm:max-w-none sm:flex-row sm:flex-wrap sm:items-center sm:justify-center sm:gap-4 2xl:mt-12 2xl:gap-5">
@@ -123,25 +121,15 @@ export default function HomePage() {
 
                   <div className="mt-6 space-y-5 text-left text-sm leading-7 text-muted-foreground sm:text-base sm:leading-relaxed 2xl:mt-8 2xl:space-y-6 2xl:text-lg 2xl:leading-8">
                     <p>
-                      Ich studiere BWL im zweiten Semester an der Universität
-                      Bayreuth und lege meinen Fokus auf Wahlmodule rund um
-                      Prozesse und technische Umsetzung. Aktuell suche ich eine
-                      Werkstudentenstelle, in der ich von Anfang an berufliche
-                      Praxis sammeln kann.
+                      Ich studiere BWL im zweiten Semester an der Universität Bayreuth und interessiere mich besonders für die Schnittstelle zwischen Wirtschaft, Digitalisierung und IT. Aktuell suche ich eine Werkstudentenstelle, in der ich früh praktische Erfahrung sammeln und reale Unternehmensabläufe kennenlernen kann.
                     </p>
 
                     <p>
-                      Mich interessiert, wie Unternehmen ihre Prozesse
-                      organisieren und optimieren. Dafür arbeite ich mit
-                      BPMN-Prozessmodellierung, n8n sowie SQL- und
-                      Python-Grundlagen.
+                      Mich interessiert, wie Unternehmen mit Daten, Software und digitalen Systemen arbeiten und wie sich betriebliche Abläufe sinnvoll unterstützen und verbessern lassen.
                     </p>
 
                     <p>
-                      Wichtig ist mir, wirtschaftliches Verständnis mit der
-                      technischen Umsetzung zu verbinden. Also wirklich zu
-                      verstehen, wo Prozesse relevante Lücken haben, um diese
-                      dann gezielt zu lösen.
+                      Wichtig ist mir, wirtschaftliches Verständnis mit technischer Umsetzung zu verbinden. Ich möchte verstehen, wie Unternehmen arbeiten, wie Entscheidungen getroffen werden und wie digitale Lösungen dabei praktisch eingesetzt werden können.
                     </p>
                   </div>
                 </div>
@@ -165,9 +153,7 @@ export default function HomePage() {
             </h2>
 
             <p className="mx-auto mt-4 max-w-2xl px-1 text-center text-sm leading-7 text-muted-foreground sm:text-base sm:leading-relaxed 2xl:mt-5 2xl:max-w-3xl 2xl:text-lg">
-              Eigene Projekte rund um Prozessanalyse und Automatisierung – von
-              der Problemstellung über die technische Umsetzung bis zur
-              wirtschaftlichen Bewertung.
+              Eigene Projekte an der Schnittstelle von Geschäftsprozessen, Daten und technischer Umsetzung – von der Problemstellung bis zur wirtschaftlichen Bewertung.
             </p>
 
             <div className="mx-auto mt-8 w-full max-w-2xl sm:mt-10 2xl:mt-12 2xl:max-w-3xl">
